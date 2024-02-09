@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+app.get('/positive', positiveIntegerHandler);
+
 function positiveIntegerHandler(req, res, next) {
     const num = parseInt(req.query.number);
     if(Number.isInteger(num) && num>=0){
@@ -16,8 +18,6 @@ function positiveIntegerHandler(req, res, next) {
 app.use('/positive', (err, req, res, next) => {
     res.status(err.status || 500).send("Error: " + err.message);
 });
-
-app.get('/positive', positiveIntegerHandler);
 
 //start the express server.
 app.listen(3000, ()=>{
