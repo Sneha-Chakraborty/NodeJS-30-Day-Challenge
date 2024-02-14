@@ -1,0 +1,20 @@
+*{
+    margin : 0;
+    border : 0;
+    box-sizing : border-box;
+}
+
+body{
+    width : 100vw;
+    height : 100vh;
+    background-color : rgb(3, 3, 22);
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.container h1{
+    font-size : 200px;
+    color : beige;
+}
+
